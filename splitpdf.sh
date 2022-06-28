@@ -1,4 +1,7 @@
 #!/bin/bash 
+####
+#  dependency: mupdf package and pdfjam
+#  run as  splitpdf input.pdf
 
 input=$1
 
@@ -16,7 +19,8 @@ if [ $rawpage -gt 1 ] ; then
    echo "exit: more than 1 page in the doc"
    exit
 fi
-cp $input .${input}.bk
+#backup
+cp $input .${input}.bk   
 
 px=8.5  #letter size x in inch 
 py=11   #letter size y in inch
